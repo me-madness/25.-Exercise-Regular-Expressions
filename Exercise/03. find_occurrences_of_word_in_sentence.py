@@ -3,8 +3,10 @@
 import re
 
 sentence = input()
-pattern = r""
-
+searched_word = input()
+pattern = fr"(?i)\b{searched_word}\b"
+matches = re.findall(pattern, sentence)
+print(len(matches))
 
 # Second task from me
 
