@@ -6,11 +6,15 @@ pattern_distance = r"[0-9]+"
 distance = {}
 commands = input()
 while commands != "end of race":
-    commands = input()
     matches_name = re.findall(pattern_name, commands)
     matches_distance = re.findall(pattern_distance, commands)
+    distance.append("".join(matches_name))
+    score = int(sum(",".join(matches_distance)))
+    commands = input()
+    print(distance)    
+    print(score)
+    
     if matches_name not in list_of_participants:
         pass
     else:
-        distance.append(matches_name)
-        
+        print(matches_distance)
