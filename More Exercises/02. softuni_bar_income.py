@@ -12,6 +12,6 @@ while command != "end of shift":
         total_sum += sum
         print(f"{customer_name}: {product} - {sum:.2f}")
     command = input()
-print(f"total income: {total_sum:.2f}")    
+print(f"Total income: {total_sum:.2f}")    
     
     
