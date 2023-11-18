@@ -9,14 +9,13 @@ commands = input()
 while commands != "end of race":
     matches_name = re.findall(pattern_name, commands)
     matches_distance = re.findall(pattern_distance, commands)
-    distance = "".join(matches_name)
+    name = "".join(matches_name)
     scores = "".join(matches_distance)
-    for score in scores:
-        common_score = score
-        new_score += int(common_score)
-    distance[0] = new_score
+    if name in list_of_participants:
+        for score in scores:
+            common_score = score
+            new_score += int(common_score)
+        distance[name] = new_score    
+    print(distance)
+    commands = input()
     
-    if matches_name not in list_of_participants:
-        pass
-    else:
-        print(matches_distance)
